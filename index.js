@@ -82,4 +82,4 @@ function checkYuGiOh (n) {
 
 console.log(checkYuGiOh(10));
 console.log(checkYuGiOh("5"));
-console.log(checkYuGiOh("fizbuzz is meh"));
+console.log(checkYuGiOh("fizzbuzz is meh"));
