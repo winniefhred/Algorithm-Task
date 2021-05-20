@@ -1,4 +1,4 @@
-//* question 1/*
+//* question 1 assignment/*
 
 function convertFahtoCelsius(f) {
   const variableType = typeof f;
@@ -32,7 +32,7 @@ function convertFahtoCelsius(f) {
  
  
  
-  //* question 2*/
+  //* question 2 assignment*/
  
  function checkYuGiOh (n) {
    if (!Number(n)) {
