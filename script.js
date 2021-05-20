@@ -1,5 +1,4 @@
-//* question 1 assignment/*
-
+//* 1 assignment question
 function convertFahtoCelsius(f) {
     const variableType = typeof f;
      let result = " ";
@@ -28,56 +27,58 @@ function convertFahtoCelsius(f) {
     
     
     console.log(convertFahtoCelsius([1,2,3]));
-    console.log(convertFahtoCelsius(0))
-    console.log(convertFahtoCelsius("0"));
-    console.log(convertFahtoCelsius(true))
+    console.log(convertFahtoCelsius(0));
     console.log(convertFahtoCelsius({temp:0}));
-   
-   
-   
-    //* question 2 assignment*/
-   
-   function checkYuGiOh (n) {
-     if (!Number(n)) {
-      let content=JSON.stringify(n)
-    return `invalid parameter: ${content}`; 
+    console.log(convertFahtoCelsius("0"));
+
+
+
+//* 2 second assignment question
+    
+function checkYuGiOh (n) {
+    if (!Number(n)) {
+     let content=JSON.stringify(n)
+   return `invalid parameter: ${content}`; 
+ }
+ let result = [];
+
+ const mappedResult = {
+   2: "yu",
+   3: "gi",
+   5: "oh",
+ };
+
+ for (let i = 1; i <= n; i++) {
+   let pushedResult = i;
+
+   if (i % 2 === 0) {
+     pushedResult = mappedResult[2];
    }
-   let result = [];
-   
-   const mappedResult = {
-    2: "yu",
-    3: "gi",
-    5: "oh",
-   };
-   
-   for (let i = 1; i <= n; i++) {
-    let pushedResult = i;
-   
-    if (i % 2 === 0) {
-      pushedResult = mappedResult[2];
-    }
-   
-    if (i % 3 === 0) {
-      pushedResult =
-        typeof pushedResult === "number"
-          ? mappedResult[3]
-          : pushedResult + "-" + mappedResult[3];
-    }
-   
-    if (i % 5 === 0) {
-      pushedResult =
-        typeof pushedResult === "number"
-          ? mappedResult[5]
-          : pushedResult + "-" + mappedResult[5];
-    }
-   
-    result.push(pushedResult);
+
+   if (i % 3 === 0) {
+     pushedResult =
+       typeof pushedResult === "number"
+         ? mappedResult[3]
+         : pushedResult + "-" + mappedResult[3];
    }
+
+   if (i % 5 === 0) {
+     pushedResult =
+       typeof pushedResult === "number"
+         ? mappedResult[5]
+         : pushedResult + "-" + mappedResult[5];
+   }
+
+   result.push(pushedResult);
+ }
+
+ return result;
+};
+
+
+console.log(checkYuGiOh(5));
+console.log(checkYuGiOh(10));
+console.log(checkYuGiOh("5"));
+console.log(checkYuGiOh("fizzbuzz is meh"));
+
    
-   return result;
-   };
-   
-   console.log(checkYuGiOh(10))
-   console.log(checkYuGiOh("5"))
-   console.log(checkYuGiOh(5))
-   console.log(checkYuGiOh("fizzbuzz is meh"))
