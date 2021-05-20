@@ -29,7 +29,10 @@
     }
     
     
-    console.log(convertFahtoCelsius());
+    console.log(convertFahtoCelsius(0));
+    console.log(convertFahtoCelsius("0"));
+    console.log(convertFahtoCelsius([1,2,3]));
+    console.log(convertFahtoCelsius({temp:0}));
    
 
 
@@ -77,4 +80,6 @@ function checkYuGiOh (n) {
  return result;
 };
 
-console.log(checkYuGiOh());
+console.log(checkYuGiOh(10));
+console.log(checkYuGiOh("5"));
+console.log(checkYuGiOh("fizbuzz is meh"));
